@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="TextBoxTestSuite" verbose="1">
+
+    <test name="TextBoxTest">
+        <parameter name="fullName" value="John Smith"></parameter>
+        <parameter name="email" value="test@test.com"></parameter>
+        <parameter name="currentAddress" value="123 Street Ave"></parameter>
+        <parameter name="permanentAddress" value="456 Street Blvd"></parameter>
+        <classes>
+            <class name="com.demoqa.tests.elementspagetests.textboxtests.TextBoxTests">
+                <methods>
+                    <include name="textBoxTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

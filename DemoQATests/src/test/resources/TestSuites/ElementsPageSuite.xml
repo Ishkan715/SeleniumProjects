@@ -1,0 +1,100 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="ElementsPageTestSuite" verbose="1">
+
+    <test name="ElementsPageTests">
+        <classes>
+            <class name="com.demoqa.tests.elementspagetests.ElementsPageTests">
+                <methods>
+                    <exclude name="sideBarTest"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+    <test name="ElementsPageSideBarTests">
+        <parameter name="selection" value="Elements"></parameter>
+        <parameter name="itemSize" value="9"></parameter>
+        <parameter name="initiallySelected" value="Elements"></parameter>
+        <parameter name="items" value="Text Box, Check Box, Radio Button, Web Tables, Buttons, Links, Broken Links - Images, Upload and Download, Dynamic Properties"></parameter>
+        <classes>
+            <class name="com.demoqa.tests.elementspagetests.ElementsPageTests">
+                <methods>
+                    <include name="sideBarTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="FormsPageSideBarTests">
+        <parameter name="selection" value="Forms"></parameter>
+        <parameter name="itemSize" value="1"></parameter>
+        <parameter name="initiallySelected" value="Elements"></parameter>
+        <parameter name="items" value="Practice Form"></parameter>
+        <classes>
+            <class name="com.demoqa.tests.elementspagetests.ElementsPageTests">
+                <methods>
+                    <include name="sideBarTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="AlertsPageSideBarTests">
+        <parameter name="selection" value="Alerts, Frame &amp; Windows"></parameter>
+        <parameter name="itemSize" value="5"></parameter>
+        <parameter name="initiallySelected" value="Elements"></parameter>
+        <parameter name="items" value="Browser Windows, Alerts, Frames, Nested Frames, Modal Dialogs"></parameter>
+        <classes>
+            <class name="com.demoqa.tests.elementspagetests.ElementsPageTests">
+                <methods>
+                    <include name="sideBarTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="WidgetsPageSideBarTests">
+        <parameter name="selection" value="Widgets"></parameter>
+        <parameter name="itemSize" value="9"></parameter>
+        <parameter name="initiallySelected" value="Elements"></parameter>
+        <parameter name="items" value="Accordian, Auto Complete, Date Picker, Slider, Progress Bar, Tabs, Tool Tips, Menu, Select Menu"></parameter>
+        <classes>
+            <class name="com.demoqa.tests.elementspagetests.ElementsPageTests">
+                <methods>
+                    <include name="sideBarTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="InteractionsPageSideBarTests">
+        <parameter name="selection" value="Interactions"></parameter>
+        <parameter name="itemSize" value="5"></parameter>
+        <parameter name="initiallySelected" value="Elements"></parameter>
+        <parameter name="items" value="Sortable, Selectable, Resizable, Droppable, Dragabble"></parameter>
+        <classes>
+            <class name="com.demoqa.tests.elementspagetests.ElementsPageTests">
+                <methods>
+                    <include name="sideBarTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="BookStorePageSideBarTests">
+        <parameter name="selection" value="Book Store Application"></parameter>
+        <parameter name="itemSize" value="4"></parameter>
+        <parameter name="initiallySelected" value="Elements"></parameter>
+        <parameter name="items" value="Login, Book Store, Profile, Book Store API"></parameter>
+        <classes>
+            <class name="com.demoqa.tests.elementspagetests.ElementsPageTests">
+                <methods>
+                    <include name="sideBarTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
