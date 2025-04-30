@@ -1,0 +1,48 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="WebTablesTestSuite" verbose="1">
+
+    <test name="WebTablesTest">
+        <classes>
+            <class name="com.demoqa.tests.elementspagetests.subsectionstests.WebTablesTests">
+                <methods>
+                    <exclude name="searchExistingEntry"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="WebTablesSearchByFirstNameTest">
+        <parameter name="searchBy" value="Alden"></parameter>
+        <classes>
+            <class name="com.demoqa.tests.elementspagetests.subsectionstests.WebTablesTests">
+                <methods>
+                    <include name="searchExistingEntry"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="WebTablesSearchByLastNameTest">
+        <parameter name="searchBy" value="Gentry"></parameter>
+        <classes>
+            <class name="com.demoqa.tests.elementspagetests.subsectionstests.WebTablesTests">
+                <methods>
+                    <include name="searchExistingEntry"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="WebTablesSearchByAgeTest">
+        <parameter name="searchBy" value="45"></parameter>
+        <classes>
+            <class name="com.demoqa.tests.elementspagetests.subsectionstests.WebTablesTests">
+                <methods>
+                    <include name="searchExistingEntry"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

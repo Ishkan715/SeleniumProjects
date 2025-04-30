@@ -5,6 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
@@ -58,6 +59,10 @@ public class BaseTest {
 
         // Switch to the new tab (assumes it's the second one)
         driver.switchTo().window(tabs.get(1));
+    }
+
+    protected void confirmPageLoadedUsingTitle(String htmlTag, String expectedTitle) {
+        Assert.assertTrue(isDisplayed(By.xpath("//" + htmlTag + "[contains(text(), '" + expectedTitle + "')]")));
     }
 
 }

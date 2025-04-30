@@ -2,7 +2,6 @@ package com.demoqa.tests.elementspagetests;
 
 import com.demoqa.pageobjects.elementspage.ElementsPage;
 import com.demoqa.tests.BaseTest;
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
@@ -18,7 +17,8 @@ public class ElementsPageTests extends BaseTest {
     public void goToElementsPage() {
         elementsPage = new ElementsPage(driver);
         elementsPage.visit();
-        Assert.assertTrue(isDisplayed(By.xpath("//div[contains(text(), 'Please select an item from left to start practice.')]")));
+        confirmPageLoadedUsingTitle("div", "Please select an item from left to start practice.");
+//        Assert.assertTrue(isDisplayed(By.xpath("//div[contains(text(), 'Please select an item from left to start practice.')]")));
     }
 
     @Parameters({"selection", "itemSize", "items", "initiallySelected"})
